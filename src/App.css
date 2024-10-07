@@ -36,3 +36,112 @@
     transform: rotate(360deg);
   }
 }
+.okno-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.okno-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.okno-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.okno-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.vidjet {
+  background-color: aqua;
+}
+
+.app{
+  width: 100%;
+  height: 100%;
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px dashed black;
+  
+}
+
+@keyframes show-loader{
+  0%{
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateY(-75px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes rotate-loader{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.circle.entering {
+  animation: show-loader 5s forwards;
+}
+
+.circle.entered {
+  animation: rotate-loader 5s infinite;
+}
+
+.circle.exiting {
+  animation: show-loader 5s reverse;
+}
+
+.circle.exited {
+  animation: show-loader 5s reverse forwards;
+}
+.item {
+  margin: 10px 0;
+  padding: 10px;
+  background: lightblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
